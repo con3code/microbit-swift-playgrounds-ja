@@ -1,56 +1,56 @@
-# micro:bit Swift Playgrounds
+# micro:bit Swift プレイグラウンド
 
-## Overview
+## 概要
 
-This document covers how to use the BBC micro:bit template book to create your own Swift Playground book. It does not include details on the format of the playground books or the markup of the Content.swift files.
+このドキュメントは、あなた自身の Swift プレイグラウンドブックを作成するために BBC micro:bit テンプレートブックを使用する方法をカバーします。プレイグラウンドブックのフォーマットやContent.swiftファイルのマークアップに関する詳細は含まれていません。
 
-The term _Swift Playground_ can have different meanings. When we refer to a Swift Playground we mean a _Swift Playground Book_. The book format allows for the creation of chapters and pages such that it is structured in a book format.
+用語_Swift Playground_は異なる意味を持つことができます。Swift Playground に言及するとき、私たちは _Swift Playground Book_ を意味します。ブック形式では、ブック形式で構成されるような章やページを作成することができます。
 
-For a complete description of the Swift Playground book format please refer to the [Apple documentation][playground_link]. You should familiarise yourself with this documentation before attempting to create your own book.
+Swift Playgroundのブックフォーマットの完全な説明については、[Appleのドキュメント][playground_link]を参照してください。あなた自身の本を作ろうとする前に、このドキュメントに慣れるべきです。
 
 [playground_link]:https://developer.apple.com/documentation/swift_playgrounds?language=objc
 
-## The micro:bit Template Book
+## micro:bitテンプレートブック
 
-Creating a Swift Playground from scratch is a complex programming task. By providing a template book we have written all the complex code required to pair and communicate with the micro:bit over Bluetooth. You can think of the template book as providing a Playground SDK (Software Development Kit).
+Swift Playgroundをゼロから作成するのは複雑なプログラミング作業です。テンプレートブックを提供することで、Bluetoothでmicro:bitとペアリングして通信するために必要な複雑なコードを全て書きました。テンプレートブックは、Playground SDK（ソフトウェア開発キット）を提供すると考えることができます。
 
-The template book is provided in this repository as **micro-bit template.playgroundbook**
+テンプレートブックはこのリポジトリで**micro-bit template.playgroundbook**として提供されています。
 
-After cloning this folder, you should rename it to something appropriate but keep the extension **.playgroundbook**
+このフォルダーをクローンした後、適切な名前に変更する必要がありますが、拡張子は**.playgroundbook**のままにしてください。
 
-On a Mac OS computer this will appear as a file _bundle_ which means it appears as a single file but is actually a directory structure. To open the directory structure, you need to select the book and choose **Show Package Contents** from the Finder's contextual menu.
+Mac OSコンピュータ上では、これは_bundle_ファイルとして表示されます。つまり、1つのファイルとして表示されますが、実際にはディレクトリ構造になっています。ディレクトリ構造を開くには、ブックを選択し、Finderのコンテキストメニューから**パッケージの内容を表示**を選択する必要があります。
 
-To edit the book you will ideally require a tool suitable for editing Swift and plist files. We would recommend downloading Xcode from the Apple App Store.
+ブックを編集するには、理想的にはSwiftとplistファイルの編集に適したツールが必要です。Apple App StoreからXcodeをダウンロードすることをお勧めします。
 
-The files you need to edit are located in **Contents/Chapters/** You will also need to edit the appropriate **manifest.plist** files. Refer to the [Apple documentation][playground_link] on details of this.
+編集する必要のあるファイルは**Contents/Chapters/**にあります。また、適切な**manifest.plist**ファイルを編集する必要があります。詳細は[Appleドキュメント][playground_link]を参照してください。
 
-Inside the **Contents/Sources** directory you will find all the source files required for the playground to communicate with the micro:bit as well as a host of other supporting functionality. These may also provide an additional insight into the functionality of our Swift Playground SDK.
+Contents/Sources**ディレクトリの中には、プレイグラウンドがmicro:bitと通信するために必要なすべてのソースファイルと、その他のサポート機能のホストがあります。これらはまた、私たちのSwift Playground SDKの機能性への追加の洞察を提供するかもしれません。
 
-## Testing Your Book
-To test your book you can either:
+## 本のテスト
+あなたの本をテストするために、あなたはどちらかをすることができます：
 
-* Copy it to the **Playgrounds** folder in your iCloud drive. The Swift Playgrounds app on your iPad will notice it has been added/updated and download it accordingly.
-* Airdrop the playground book from the Finder to your iPad, then respond accordingly on the iPad. This is fine the first time you copy the book but subsequent drops will make copies of the book which will build-up over time and need to be deleted.
-* Utilise a script file as detailed below or author an Automator action.
+* iCloudドライブの**Playgrounds**フォルダにコピーしてください。iPadのSwift Playgroundsアプリは、それが追加/更新されたことに気づき、それに応じてダウンロードします。
+* FinderからiPadにプレイグラウンドブックをエアドロップし、iPad上で対応する。この方法は、最初に本をコピーするときは良いのですが、それ以降にドロップすると、本のコピーが作成され、時間が経つにつれて蓄積され、削除する必要があります。
+* 以下に詳しく説明するスクリプトファイルを利用するか、Automatorアクションを作成してください。
 
-The Apple documentation also lists various ways of getting your playground onto a device.
+Appleのドキュメントには、プレイグラウンドをデバイスに取り込むさまざまな方法も掲載されています。
 
-## The micro:bit API Book
+## micro:bit API Book
 
-This repository also contains another Swift Playground book called **microbit API.playgroundbook**
+このリポジトリには**microbit API.playgroundbook**という別のSwiftプレイグラウンドブックも含まれています。
 
-This playground provides an interactive demonstration of the whole of the API we have defined for interacting with the micro:bit much of which is not included in the _Intro_ book. You may wish to install this to your iPad and explore it before developing your own book as it will illustrate the many possibilites that are possible from the Swift Playgrounds app.
+このプレイグラウンドは、micro:bit と対話するために定義した API 全体のインタラクティブなデモンストレーションを提供します。Swift Playgroundsアプリから可能な多くの可能性を説明するので、あなた自身の本を開発する前に、これをiPadにインストールして探索することを望むかもしれません。
 
-## Using Script Files
+## スクリプトファイルの使用
 
-The repository also contains three script files:
+リポジトリには3つのスクリプトファイルも含まれています：
 
-* create\_doc\_book.sh
-* create\_intro\_book.sh
-* create\_template\_book.sh
+* create_doc_book.sh
+* create_intro_book.sh
+* create_template_book.sh
 
-These were used by us to the create the **micro:bit API**,  **Intro to the BBC micro:bit** and **micro-bit template** playground books. These scripts copy and _compile_ the **micro-bit source** book and then merge the books' contents from separate folders. You may wish to copy and modify one of these scripts for your own workflow. They contain lines to compile the original storyboard and assets from the _source_ book. Unless you intend to modify the storyboard or assets then you should just work from the compiled template book instead.
+これらは、**micro:bit API**, **Intro to the BBC micro:bit** and **micro-bit template** playground booksを作成するために使用しました。これらのスクリプトは**micro-bit source**ブックをコピーしてコンパイルし、ブックの内容を別々のフォルダからマージします。これらのスクリプトのいずれかをコピーし、あなた自身のワークフロー用に変更することができます。これらのスクリプトには、オリジナルのストーリーボードとアセットをソースブックからコンパイルする行が含まれています。ストーリーボードやアセットを修正するつもりがなければ、代わりにコンパイルされたテンプレートブックから作業してください。
 
-## Code of Conduct
+## 行動規範
 
-Trust, partnership, simplicity and passion are our core values we live and breathe in our daily work life and within our projects. Our open-source projects are no exception. We have an active community which spans the globe and we welcome and encourage participation and contributions to our projects by everyone. We work to foster a positive, open, inclusive and supportive environment and trust that our community respects the micro:bit code of conduct. Please see our [code of conduct](https://microbit.org/safeguarding/) which outlines our expectations for all those that participate in our community and details on how to report any concerns and what would happen should breaches occur.
+信頼、パートナーシップ、シンプルさ、そして情熱は、私たちが日々の仕事やプロジェクトで実践している基本的な価値観です。私たちのオープンソースプロジェクトも例外ではありません。私たちは、世界中にまたがる活発なコミュニティを持ち、誰もが私たちのプロジェクトに参加し、貢献することを歓迎し、奨励しています。私たちは、前向きでオープン、包括的で協力的な環境の醸成に努めており、コミュニティがmicro:bitの行動規範を尊重することを信頼しています。私たちの[行動規範](https://microbit.org/safeguarding/)をご覧ください。私たちのコミュニティに参加するすべての人々に対する私たちの期待や、懸念事項の報告方法、違反が発生した場合の詳細が記載されています。
